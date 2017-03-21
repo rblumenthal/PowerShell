@@ -40,8 +40,8 @@ write-host "Found " $items.Count " items"
  $fileInfo.Dispose() 
  }
 }
-$siteUrl = “https://stonybrookmedicine.sharepoint.com/sites/Russ/”
-$username ="russell.blumenthal@stonybrookmedicine.edu"
+$siteUrl = “https://<tenant>/sites/”
+$username ="emailaddress@domain.com"
 $password = Read-Host -Prompt "Enter password" -AsSecureString
 $credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($username, $password)
 downloadDocs $siteURL $credentials
